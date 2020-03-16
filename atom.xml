@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wlx381144235.github.io</id>
     <title>夜尽</title>
-    <updated>2020-03-16T02:35:41.866Z</updated>
+    <updated>2020-03-16T02:39:43.533Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wlx381144235.github.io"/>
     <link rel="self" href="https://wlx381144235.github.io/atom.xml"/>
@@ -16,9 +16,7 @@
         <link href="https://wlx381144235.github.io/post/ce-shi/">
         </link>
         <updated>2020-03-16T02:34:19.000Z</updated>
-        <content type="html"><![CDATA[<p>常用注解一览：<br>
-<img src="en-resource://database/4722:1" alt="1a85dc5a627e4143e2d95f8d2a074277.png" loading="lazy"></p>
-<hr>
+        <content type="html"><![CDATA[<hr>
 <p>接下来说说少见的注解：<br>
 <code>使用Results和Result注解</code></p>
 <pre><code class="language-java">@Select(&quot; Select * from user &quot;)
