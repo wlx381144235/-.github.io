@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wlx381144235.github.io</id>
     <title>夜尽</title>
-    <updated>2020-03-16T03:15:56.910Z</updated>
+    <updated>2020-03-24T08:15:16.187Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wlx381144235.github.io"/>
     <link rel="self" href="https://wlx381144235.github.io/atom.xml"/>
@@ -16,53 +16,7 @@
         <link href="https://wlx381144235.github.io/post/ce-shi/">
         </link>
         <updated>2020-03-16T02:34:19.000Z</updated>
-        <content type="html"><![CDATA[<hr>
-<p>接下来说说少见的注解：<br>
-<code>使用Results和Result注解</code></p>
-<pre><code class="language-java">@Select(&quot; Select * from user &quot;)
-    @Results({
-            @Result(id = true, column = &quot;id&quot;, property = &quot;id&quot;),
-            @Result(column = &quot;name&quot;, property = &quot;name&quot;),
-            @Result(column = &quot;tel&quot;, property = &quot;tel&quot;),
-            @Result(column = &quot;birth&quot;, property = &quot;birth&quot;),
-            @Result(column = &quot;address&quot;, property = &quot;address&quot;)
-    })
-    List&lt;User&gt; queryAllUser();
-</code></pre>
-<p>用一个id属性表示这是表对应的id column属性表示这是对应的表字段，property属性表示这是队形的类的属性名。</p>
-<hr>
-<p>还有就是查询一个使用<code>One</code>注解：<br>
-one注解就表示我们查询出来的结果只有一个。</p>
-<pre><code class="language-java">@Select(&quot; select * from user where id = #{id} &quot;)
-    @Results(
-            value = {
-                    @Result(column = &quot;name&quot;,property = &quot;name&quot;),
-                    @Result(column = &quot;type&quot;,property = &quot;type&quot;,
-                    //one指示我们，查询出来的结果只有一个。
-                    one = @One(select=&quot;com.xxxx.UserMapper.findTypeById&quot;,
-                    //及时加载  
-                    fetchType = FetchType.EAGER))
-            }
-    )
-    User findUserById(Integer id);
-</code></pre>
-<hr>
-<p>还有就是查询列表的<code>many</code>注解：</p>
-<pre><code class="language-java">@Select(&quot; select * from dept&quot;)
-    @Results({
-            @Result(id = true, column = &quot;did&quot;, property = &quot;did&quot;),
-            @Result(column = &quot;name&quot;, property = &quot;name&quot;),
-            @Result(column = &quot;address&quot;, property = &quot;address&quot;),
-            @Result(column = &quot;id&quot;,property = &quot;emps&quot;,
-            //many指示我们，查询出来的结果有很多个
-            many = @Many(
-            //select = sql语句
-            select = &quot;com.xxxx.EmpMapper.findAllEmpByDid&quot;,
-            //懒加载
-            fetchType = FetchType.LAZY))
-    })
-    List&lt;Dept&gt; findAllDept();
-</code></pre>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://wlx381144235.github.io/post-images/1585037696367.jpg" alt="" loading="lazy"></figure>
 ]]></content>
     </entry>
 </feed>
